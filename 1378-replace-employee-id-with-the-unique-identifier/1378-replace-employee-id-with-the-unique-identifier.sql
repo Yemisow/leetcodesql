@@ -1,7 +1,8 @@
 # Write your MySQL query statement below
 
-select EU.unique_id, E.name
+select EUNI.unique_id, E.name
 from Employees E
-left join  EmployeeUNI EU
+left join
+EmployeeUNI EUNI
 on 
-EU.id = E.Id
+E.id = EUNI.id

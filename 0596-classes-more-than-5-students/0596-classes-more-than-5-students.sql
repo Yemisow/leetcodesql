@@ -1,9 +1,10 @@
 # Write your MySQL query statement below
-
 with cte as
-(select class,count(student) cutstu
+(
+select class, count(student) cnt
 from Courses
-group by class
-having cutstu >=5)
+group by class)
 
-select class from cte
+select class
+from cte 
+where cnt >=5
